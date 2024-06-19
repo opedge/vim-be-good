@@ -100,7 +100,17 @@ function Buffer:render(lines)
     end
 
     log.info("Buffer:Rendering")
-    vim.api.nvim_buf_set_lines(self.bufh, idx, idx + #lines, false, lines)
+    
+    local new_lines = {}
+    if lines[0] ~= nil then
+        new_lines[#new_lines+1] = lines[0]
+        for i=1,#lines do
+            new_lines[#new_lines+1] = lines[i]
+        end
+    else
+        new_lines = lines
+    end
+    vim.api.nvim_buf_set_lines(self.bufh, idx, idx + #new_lines, false, new_lines)
 end
 
 function Buffer:debugLine(line)
