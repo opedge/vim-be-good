@@ -2,7 +2,7 @@ local GameUtils = require("vim-be-good.game-utils")
 local log = require("vim-be-good.log")
 
 local boardSizeOptions = {
-    noob = 3,
+    noob = 10,
     easy = 5,
     medium = 7,
     hard = 8,
