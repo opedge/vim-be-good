@@ -2,7 +2,7 @@ local GameUtils = require("vim-be-good.game-utils")
 local log = require("vim-be-good.log")
 
 local randomOffset = {
-    noob = 10,
+    noob = 20,
     easy = 12,
     medium = 14,
     hard = 16,
